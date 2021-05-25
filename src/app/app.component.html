@@ -1,0 +1,37 @@
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3">
+        <select class="form-control mt-5" [(ngModel)]="selectedIndex" (change)="selected()">
+          <option *ngFor="let item of videoSrc; let i = index" [value]="i">{{item.title}}</option>
+        </select>
+      </div>
+      <div class="col-lg-9">
+        <span class="text-center text-primary mt-5">Now Playing - {{title}}</span>
+        <div class="video mt-2" *ngIf="!loading; else loader;">
+          <video id='hls-video'>
+            <source [src]="src" type='application/x-mpegURL'>
+          </video>
+        </div>
+        <ng-template #loader>
+          <span class="text-center text-primary">Now playing {{title}}</span>
+        </ng-template>
+
+        <div class="controls mt-2">
+          <button class="btn docs-prev button" [disabled]="current === 0" (click)="previous()">
+            <span class="text-primary mr-2" *ngIf="current !== 0">{{videoSrc[current - 1]?.title}}</span>
+            <span class="arrow-prev">←
+            </span><span>Previous</span>
+          </button>
+
+          <button class="btn docs-next button" [disabled]="current === videoSrc.length - 1" (click)="next()">
+            <span>Next</span>
+            <span class="arrow-next"> →</span>
+            <span class="text-primary ml-2" *ngIf="current !== videoSrc.length - 1">{{videoSrc[current +
+              1]?.title}}</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
