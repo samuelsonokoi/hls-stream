@@ -16,18 +16,18 @@ export class AppComponent implements OnInit, AfterViewInit {
       src: 'https://moctobpltc-i.akamaihd.net/hls/live/571329/eight/playlist.m3u8',
       title: 'Live Akamai'
     },
-    {
-      src: 'http://qthttp.apple.com.edgesuite.net/1010qwoeiuryfg/sl.m3u8',
-      title: 'Apple'
-    },
+    // {
+    //   src: 'http://qthttp.apple.com.edgesuite.net/1010qwoeiuryfg/sl.m3u8',
+    //   title: 'Apple'
+    // },
     {
       src: 'http://playertest.longtailvideo.com/adaptive/captions/playlist.m3u8',
       title: 'Purina Cat'
     },
-    {
-      src: 'http://devimages.apple.com/iphone/samples/bipbop/bipbopall.m3u8',
-      title: 'Sample from Apple'
-    },
+    // {
+    //   src: 'http://devimages.apple.com/iphone/samples/bipbop/bipbopall.m3u8',
+    //   title: 'Sample from Apple'
+    // },
     // {
     //   src: 'http://media.developer.dolby.com/DolbyVision_Atmos/profile5_HLS/master.m3u8',
     //   title: 'Dolby Vision Profile 5'
